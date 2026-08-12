@@ -182,7 +182,7 @@ def check_in(
         )
         .filter(
             Attendance.attendance_date
-            == Attendance.today()
+            == date.today()
         )
         .first()
     )
@@ -195,7 +195,7 @@ def check_in(
 
     attendance = Attendance(
         employee_id=data.employee_id,
-        attendance_date=Attendance.today(),
+        attendance_date=date.today(),
         check_in=Attendance.current_time(),
         status="present",
         method="manual",
@@ -227,7 +227,7 @@ def check_out(
         )
         .filter(
             Attendance.attendance_date
-            == Attendance.today()
+            == date.today()
         )
         .first()
     )

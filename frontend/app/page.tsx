@@ -58,7 +58,7 @@ export default function Home() {
       setLoading(true);
 
       const response = await fetch(
-        "http://127.0.0.1:8000/employees"
+        "https://attendance-system-jbdu.onrender.com/employees"
       );
 
       if (!response.ok) {
@@ -86,7 +86,7 @@ export default function Home() {
       setAttendanceLoading(true);
 
       const response = await fetch(
-        "http://127.0.0.1:8000/attendance"
+        "https://attendance-system-jbdu.onrender.com/attendance"
       );
 
       if (!response.ok) {
@@ -161,7 +161,7 @@ export default function Home() {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:8000/employees",
+        "https://attendance-system-jbdu.onrender.com/employees",
         {
           method: "POST",
           headers: {
@@ -214,7 +214,7 @@ export default function Home() {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:8000/attendance/check-in",
+        "https://attendance-system-jbdu.onrender.com/attendance/check-in",
         {
           method: "POST",
           headers: {
@@ -258,7 +258,7 @@ export default function Home() {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:8000/attendance/check-out",
+        "https://attendance-system-jbdu.onrender.com/attendance/check-out",
         {
           method: "POST",
           headers: {
